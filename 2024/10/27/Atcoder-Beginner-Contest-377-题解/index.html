@@ -27,7 +27,7 @@
 <meta property="og:description" content="棋盘专场。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-10-27T05:57:56.000Z">
-<meta property="article:modified_time" content="2024-10-28T01:44:28.332Z">
+<meta property="article:modified_time" content="2024-11-12T12:09:42.739Z">
 <meta property="article:author" content="IncredibleJ">
 <meta property="article:tag" content="Algorithm">
 <meta property="article:tag" content="Atcoder">
@@ -228,7 +228,7 @@ Contest 2024（AtCoder Beginner Contest 377) 题解</span></a></li><li class="na
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-10-28 09:44:28" itemprop="dateModified" datetime="2024-10-28T09:44:28+08:00">2024-10-28</time>
+      <time title="修改时间：2024-11-12 20:09:42" itemprop="dateModified" datetime="2024-11-12T20:09:42+08:00">2024-11-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -349,8 +349,9 @@ class="math inline">\(X_i\)</span>上的数，我们从<span
 class="math inline">\(i\)</span>向位置<span
 class="math inline">\(X_i\)</span>连边，这样连成的图会形成多个环，且每个<strong>位置</strong>到达的下一个<strong>位置</strong>是确定的。注意，这里的图，位置是不变的，变化的只有每个位置的图，因此，每个位置走<span
 class="math inline">\(2^k\)</span>步到达的位置我们可以确定下来。</p>
-<p>然后是本题，虽然$ip_i <span
-class="math inline">\(会产生一个环，很不幸的是，由于\)</span>p_i$在变化，因此连成的图里每个位置到达的下一个位置也在变化，因此每个位置走<span
+<p>然后是本题，虽然<span class="math inline">\(p_i\)</span>连向<span
+class="math inline">\(i\)</span>会产生一个环，很不幸的是，由于<span
+class="math inline">\(p_i\)</span>在变化，因此连成的图里每个位置到达的下一个位置也在变化，因此每个位置走<span
 class="math inline">\(2^k\)</span>步到达的位置是不能倍增得到的。</p>
 <p>一个结论是：对于构成同一个环的几个位置，经过<span
 class="math inline">\(k\)</span>次操作，每个数向右循环移动<span
