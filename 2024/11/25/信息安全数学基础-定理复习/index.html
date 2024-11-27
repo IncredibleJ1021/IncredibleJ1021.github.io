@@ -27,7 +27,7 @@
 <meta property="og:description" content="UESTC软件学院互联网安全方向信息安全数学基础的定理复习。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-11-25T12:50:34.000Z">
-<meta property="article:modified_time" content="2024-11-27T06:51:08.809Z">
+<meta property="article:modified_time" content="2024-11-27T10:54:54.713Z">
 <meta property="article:author" content="IncredibleJ">
 <meta property="article:tag" content="信息安全数学基础">
 <meta property="article:tag" content="软件工程——互联网安全">
@@ -227,7 +227,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-11-27 14:51:08" itemprop="dateModified" datetime="2024-11-27T14:51:08+08:00">2024-11-27</time>
+      <time title="修改时间：2024-11-27 18:54:54" itemprop="dateModified" datetime="2024-11-27T18:54:54+08:00">2024-11-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -284,8 +284,8 @@ mb\)</span></li>
 <p>用定义即可</p>
 <ol start="4" type="1">
 <li>互相整除则相等或互为相反数。<span class="math inline">\(a\mid b,
-b\mid a\)</span>，则 $ a = b<span class="math inline">\(或\)</span>a =
--b$</li>
+b\mid a\)</span>，则 <span class="math display">\[a = b\]</span> 或
+<span class="math display">\[a = -b\]</span></li>
 </ol>
 <p>两次定义代换。</p>
 <h1 id="最大公因数gcd">最大公因数gcd</h1>
@@ -670,7 +670,10 @@ class="math inline">\(q\)</span> 阶子群。</li>
 class="math inline">\(a^r = (a^{qs})^{-1}\in H\)</span>，所以 <span
 class="math inline">\(r = 0, n = qs\)</span>。<span
 class="math inline">\(H\)</span>可以表示为<span class="math inline">\(H
-= \{e,a^s,\cdots,a^{(q-1)s}\}\)</span></p>
+= \{e,a^s,\cdots,a^{(q-1)s}\}\)</span>，且当 <span
+class="math inline">\(q\)</span> 跑遍所有正因子时， <span
+class="math inline">\(s\)</span> 也跑遍所有正因子，所以只有一个 <span
+class="math inline">\(q\)</span> 阶子群。</p>
 <h3 id="循环群的同构">循环群的同构</h3>
 <ul>
 <li>设 $G = <span
@@ -686,9 +689,9 @@ class="math inline">\(G\)</span> 与整数模 $ m $ 的剩余类加群同构。<
 class="math inline">\(N\)</span></p>
 <p>定义 <span class="math inline">\(f:Z\to G\)</span>为 <span
 class="math inline">\(f(k) = a^k\)</span>，则 <span
-class="math inline">\(f\)</span> 是个满射。且 $ f(l+n) = a^{l+n} =
-a<sup>la</sup>n = f(l)f(n) $，故 <span class="math inline">\(f\)</span>
-是个群同态。</p>
+class="math inline">\(f\)</span> 是个满射。且 <span
+class="math display">\[ f(l+n) = a^{l+n} = a^la^n = f(l)f(n)
+\]</span>，故 <span class="math inline">\(f\)</span> 是个群同态。</p>
 <p>若阶无限，那么对 <span class="math inline">\(n\in ker(f)\)</span>，有
 <span class="math inline">\(f(n) = a^n= e\)</span>，可以得出 <span
 class="math inline">\(n = 0\)</span>，即<span
