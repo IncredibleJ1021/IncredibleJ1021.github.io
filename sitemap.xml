@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.incrediblej.cool/2025/01/13/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8-HTML5/</loc>
+    
+    <lastmod>2025-01-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.incrediblej.cool/2025/01/13/Atcoder-Beginner-Contest-388-%E9%A2%98%E8%A7%A3/</loc>
+    
+    <lastmod>2025-01-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.incrediblej.cool/2024/12/04/Atcoder-Beginner-Contest-381-%E9%A2%98%E8%A7%A3/</loc>
     
     <lastmod>2024-12-04</lastmod>
@@ -38,6 +56,15 @@
   </url>
   
   <url>
+    <loc>https://www.incrediblej.cool/2024/10/29/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84-%E5%B7%AE%E5%88%86/</loc>
+    
+    <lastmod>2024-11-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.incrediblej.cool/2024/11/11/Atcoder-Beginner-Contest-379-%E9%A2%98%E8%A7%A3/</loc>
     
     <lastmod>2024-11-11</lastmod>
@@ -59,15 +86,6 @@
     <loc>https://www.incrediblej.cool/2024/11/09/Codeforces-Round-984-Div-3-%E9%A2%98%E8%A7%A3/</loc>
     
     <lastmod>2024-11-09</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.incrediblej.cool/2024/10/29/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84-%E5%B7%AE%E5%88%86/</loc>
-    
-    <lastmod>2024-11-03</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -157,7 +175,7 @@
 
   <url>
     <loc>https://www.incrediblej.cool/</loc>
-    <lastmod>2024-12-05</lastmod>
+    <lastmod>2025-01-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -165,56 +183,70 @@
   
   <url>
     <loc>https://www.incrediblej.cool/tags/Algorithm/</loc>
-    <lastmod>2024-12-05</lastmod>
+    <lastmod>2025-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.incrediblej.cool/tags/Atcoder/</loc>
-    <lastmod>2024-12-05</lastmod>
+    <lastmod>2025-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.incrediblej.cool/tags/Codeforces/</loc>
-    <lastmod>2024-12-05</lastmod>
+    <lastmod>2025-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.incrediblej.cool/tags/welcome/</loc>
-    <lastmod>2024-12-05</lastmod>
+    <lastmod>2025-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.incrediblej.cool/tags/%E6%AC%A2%E8%BF%8E/</loc>
-    <lastmod>2024-12-05</lastmod>
+    <lastmod>2025-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.incrediblej.cool/tags/Data-Structure/</loc>
-    <lastmod>2024-12-05</lastmod>
+    <lastmod>2025-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.incrediblej.cool/tags/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/</loc>
-    <lastmod>2024-12-05</lastmod>
+    <lastmod>2025-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.incrediblej.cool/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E2%80%94%E2%80%94%E4%BA%92%E8%81%94%E7%BD%91%E5%AE%89%E5%85%A8/</loc>
-    <lastmod>2024-12-05</lastmod>
+    <lastmod>2025-01-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.incrediblej.cool/tags/HTML/</loc>
+    <lastmod>2025-01-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.incrediblej.cool/tags/%E5%89%8D%E7%AB%AF/</loc>
+    <lastmod>2025-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -223,35 +255,42 @@
   
   <url>
     <loc>https://www.incrediblej.cool/categories/Atcoder/</loc>
-    <lastmod>2024-12-05</lastmod>
+    <lastmod>2025-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.incrediblej.cool/categories/Codeforces/</loc>
-    <lastmod>2024-12-05</lastmod>
+    <lastmod>2025-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.incrediblej.cool/categories/Welcome/</loc>
-    <lastmod>2024-12-05</lastmod>
+    <lastmod>2025-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.incrediblej.cool/categories/Algorithm/</loc>
-    <lastmod>2024-12-05</lastmod>
+    <lastmod>2025-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.incrediblej.cool/categories/UESTC/</loc>
-    <lastmod>2024-12-05</lastmod>
+    <lastmod>2025-01-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.incrediblej.cool/categories/Web/</loc>
+    <lastmod>2025-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
