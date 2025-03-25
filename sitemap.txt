@@ -1,6 +1,6 @@
+https://www.incrediblej.cool/2025/03/24/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A8%A1%E7%89%88/
 https://www.incrediblej.cool/2025/03/24/Atcoder-Beginner-Contest-398-%E9%A2%98%E8%A7%A3/
 https://www.incrediblej.cool/2025/03/03/%E5%9B%BE%E8%AE%BA%E6%A8%A1%E7%89%88/
-https://www.incrediblej.cool/2025/03/24/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A8%A1%E7%89%88/
 https://www.incrediblej.cool/2025/03/23/Codeforces-Round-994-990-%E9%A2%98%E8%A7%A3/
 https://www.incrediblej.cool/2025/03/23/Atcoder-Beginner-Contest-386-387-%E9%A2%98%E8%A7%A3/
 https://www.incrediblej.cool/2025/03/07/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%A8%A1%E7%89%88/
@@ -54,6 +54,7 @@ https://www.incrediblej.cool/tags/Math/
 https://www.incrediblej.cool/tags/Miscellany/
 https://www.incrediblej.cool/tags/Dynamic-Programming/
 https://www.incrediblej.cool/tags/Template/
+https://www.incrediblej.cool/tags/String/
 https://www.incrediblej.cool/categories/Atcoder/
 https://www.incrediblej.cool/categories/Codeforces/
 https://www.incrediblej.cool/categories/Welcome/
