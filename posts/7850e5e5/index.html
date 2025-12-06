@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha256-5eIC48iZUHmSlSUz9XtjRyK2mzQkHScZY1WdMaoz74E=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.css" integrity="sha256-gkQVf8UKZgQ0HyuxL/VnacadJ+D2Kox2TCEBuNQg5+w=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.incrdiblej.cool","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.21.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"show_result":true,"style":"default"},"fold":{"enable":true,"height":300,"text":"展开代码","icon":"fas fa-angle-down"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="上海区域赛，THU 出题，多学一些数学，尤其是各种筛。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数论学习笔记">
+<meta property="og:url" content="https://www.incrdiblej.cool/posts/7850e5e5/index.html">
+<meta property="og:site_name" content="IncredibleJ">
+<meta property="og:description" content="上海区域赛，THU 出题，多学一些数学，尤其是各种筛。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-10-15T06:40:24.000Z">
+<meta property="article:modified_time" content="2025-11-03T08:28:34.413Z">
+<meta property="article:author" content="IncredibleJ">
+<meta property="article:tag" content="Algorithm">
+<meta property="article:tag" content="Graph">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://www.incrdiblej.cool/posts/7850e5e5/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.incrdiblej.cool/posts/7850e5e5/","path":"posts/7850e5e5/","title":"数论学习笔记"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>数论学习笔记 | IncredibleJ</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">IncredibleJ</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%8B%84%E5%88%A9%E5%85%8B%E9%9B%B7%E5%8D%B7%E7%A7%AF"><span class="nav-number">1.</span> <span class="nav-text">狄利克雷卷积</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="nav-number">1.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E6%80%A7%E8%B4%A8"><span class="nav-number">1.2.</span> <span class="nav-text">常见性质</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%99%A4%E6%95%B0%E5%87%BD%E6%95%B0%E4%B8%8E%E5%B9%82%E5%87%BD%E6%95%B0"><span class="nav-number">1.2.1.</span> <span class="nav-text">除数函数与幂函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0%E4%B8%8E%E6%81%92%E7%AD%89%E5%87%BD%E6%95%B0"><span class="nav-number">1.2.2.</span> <span class="nav-text">欧拉函数与恒等函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%A4%E6%8D%A2%E5%BE%8B"><span class="nav-number">1.2.3.</span> <span class="nav-text">交换律</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%93%E5%90%88%E5%BE%8B"><span class="nav-number">1.2.4.</span> <span class="nav-text">结合律</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%B9%E5%87%BD%E6%95%B0%E5%8A%A0%E6%B3%95%E7%9A%84%E5%88%86%E9%85%8D%E5%BE%8B"><span class="nav-number">1.2.5.</span> <span class="nav-text">对函数加法的分配律</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E4%BD%8D%E5%85%83"><span class="nav-number">1.2.6.</span> <span class="nav-text">单位元</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%86%E5%85%83"><span class="nav-number">1.2.7.</span> <span class="nav-text">逆元</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%8E%AB%E6%AF%94%E4%B9%8C%E6%96%AF%E5%8F%8D%E6%BC%94"><span class="nav-number">2.</span> <span class="nav-text">莫比乌斯反演</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E7%AD%9B"><span class="nav-number">3.</span> <span class="nav-text">线性筛</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AD%9B%E6%B3%95%E6%B1%82%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0"><span class="nav-number">3.1.</span> <span class="nav-text">筛法求欧拉函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AD%9B%E6%B3%95%E6%B1%82%E8%8E%AB%E6%AF%94%E4%B9%8C%E6%96%AF%E5%87%BD%E6%95%B0"><span class="nav-number">3.2.</span> <span class="nav-text">筛法求莫比乌斯函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AD%9B%E6%B3%95%E6%B1%82%E7%BA%A6%E6%95%B0%E4%B8%AA%E6%95%B0%E5%87%BD%E6%95%B0"><span class="nav-number">3.3.</span> <span class="nav-text">筛法求约数个数函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AD%9B%E6%B3%95%E6%B1%82%E5%9B%A0%E6%95%B0%E5%92%8C%E5%87%BD%E6%95%B0"><span class="nav-number">3.4.</span> <span class="nav-text">筛法求因数和函数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#o%E5%80%BC%E5%9F%9F-%E9%A2%84%E5%A4%84%E7%90%86%E7%9A%84-o1-%E6%9F%A5%E8%AF%A2-gcd"><span class="nav-number">4.</span> <span class="nav-text">O(值域) 预处理的 O(1) 查询 GCD</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#bsgsexbsgs"><span class="nav-number">5.</span> <span class="nav-text">BSGS&#x2F;exBSGS</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9D%9C%E6%95%99%E7%AD%9B"><span class="nav-number">6.</span> <span class="nav-text">杜教筛</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">IncredibleJ</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">68</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">26</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.incrdiblej.cool/posts/7850e5e5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="IncredibleJ">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="IncredibleJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="数论学习笔记 | IncredibleJ">
+      <meta itemprop="description" content="上海区域赛，THU 出题，多学一些数学，尤其是各种筛。">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          数论学习笔记
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-10-15 14:40:24" itemprop="dateCreated datePublished" datetime="2025-10-15T14:40:24+08:00">2025-10-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-11-03 16:28:34" itemprop="dateModified" datetime="2025-11-03T16:28:34+08:00">2025-11-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Algorithm/" itemprop="url" rel="index"><span itemprop="name">Algorithm</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>5.4k</span>
+    </span>
+</div>
+
+            <div class="post-description">上海区域赛，THU 出题，多学一些数学，尤其是各种筛。</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="狄利克雷卷积">狄利克雷卷积</h1>
+<h2 id="定义">定义</h2>
+<p>数论函数：定义在正整数集合上的函数。</p>
+<p>积性函数：一个数论函数 <span class="math inline">\(f\)</span>
+被称为积性函数，满足对于互素的 <span
+class="math inline">\(x,y\)</span>，满足 <span
+class="math inline">\(f(x)f(y) = f(xy)\)</span>。</p>
+<p>先定义一些常用的数论函数的符号：</p>
+<p>单位函数 <span class="math inline">\(\varepsilon(n) =
+\begin{cases}1,n = 1\\0,\text{otherwise} \end{cases}\)</span>​</p>
+<p>幂函数 <span class="math inline">\(\text{Id}_k(n) = n^k\)</span>，当
+<span class="math inline">\(k = 1\)</span> 时为恒等函数 <span
+class="math inline">\(\text{Id}(n)\)</span>，当 <span
+class="math inline">\(k = 1\)</span> 时为常数函数 <span
+class="math inline">\(1(n)\)</span>。</p>
+<p>除数函数 <span class="math inline">\(\sigma_k(n) = \sum_{d\mid n}
+d^k\)</span>，当 <span class="math inline">\(k = 1\)</span>
+时为因数和函数 <span class="math inline">\(\sigma(n)\)</span>，当 <span
+class="math inline">\(k = 0\)</span> 时为因数个数函数 <span
+class="math inline">\(\sigma_0(n)\)</span></p>
+<p>欧拉函数 <span class="math inline">\(\varphi(n) = \sum_{i =
+1}^{n-1}\limits[(i, n) = 1]\)</span>。</p>
+<p>莫比乌斯函数 <span class="math inline">\(\mu(n) = \begin{cases}1,n =
+1\\0,n \text{有平方因子}\\(-1)^k,n\text{是 k
+个不同因数的乘积}\end{cases}\)</span></p>
+<p>狄利克雷卷积是定义在数论函数上的一种二元运算，<span
+class="math inline">\((f*g)(n) = \sum_{d\mid
+n}f(d)g(\dfrac{n}{d})\)</span>。</p>
+<h2 id="常见性质">常见性质</h2>
+<p>若 <span class="math inline">\(f,g\)</span> 是积性函数，则 <span
+class="math inline">\((f*g)\)</span>​ 也是积性函数。</p>
+<h3 id="除数函数与幂函数">除数函数与幂函数</h3>
+<p><span class="math inline">\((f * 1)(n) = \sum_{d\mid
+n}f(d)1(\dfrac{n}{d}) = \sum_{d\mid
+n}f(d)\)</span>，也就是一个函数与常数函数做狄利克雷卷积，就变成了 <span
+class="math inline">\(n\)</span> 的因数的函数和。</p>
+<p>因此 <span class="math inline">\((\text{Id}_k * 1) = \sum_{d\mid
+n}d^k = \sigma_k\)</span></p>
+<h3 id="欧拉函数与恒等函数">欧拉函数与恒等函数</h3>
+<p>这里回忆一下欧拉定理与欧拉函数相关结论：</p>
+<p><span class="math inline">\(\varphi(p^k) = p^k -
+p^{k-1}\)</span>，因为在 <span class="math inline">\([1, p^k]\)</span>
+中，只有 <span class="math inline">\(p,p^2,...,p^k\)</span> 整除 <span
+class="math inline">\(p^k\)</span>。</p>
+<p>若 <span class="math inline">\(m=p_1^{e_1}p_2^{e_2}\cdots
+p_k^{e_k}\)</span>，则 <span
+class="math inline">\(\varphi(m)=m\prod_{i=1}^k(1-\dfrac{1}{p_i})\)</span>​。</p>
+<p>然后就是幂函数与恒等函数的经典结论：欧拉函数与常数函数卷积等于恒等函数。</p>
+<p>这样，我们可以把 <span class="math inline">\(x\)</span> 写成 <span
+class="math inline">\(\sum_{d\mid x}\varphi(d)\)</span>
+，然后枚举除数用于推导式子。</p>
+<p><span class="math inline">\((\varphi * 1)(n) = \sum_{d\mid
+n}\varphi(d) = \text{Id}(n)\)</span>，即 <span
+class="math inline">\((\varphi * 1) = \text{Id}\)</span>。</p>
+<p>因为若 <span class="math inline">\(n = p^m\)</span>，<span
+class="math inline">\(\sum_{d\mid n}\varphi(d) = \varphi(1) +
+\sum_{i=1}^m\varphi(p^i) = 1 + \sum_{i=1}^m(p^i - p^{i - 1}) = p^m =
+n\)</span>。</p>
+<p>那么将 <span class="math inline">\(n\)</span> 分解为 <span
+class="math inline">\(p_1^{e_1}p_2^{e_2}\cdots
+p_k^{e_k}\)</span>，根据积性函数的性质即可得到 <span
+class="math inline">\((\varphi * 1)(\prod p^m) = \prod(\varphi * 1)(p^m)
+= \prod p^m = n\)</span>​。</p>
+<h3 id="交换律">交换律</h3>
+<p><span class="math inline">\((f * g)(n) = (g * f)(n)\)</span></p>
+<h3 id="结合律">结合律</h3>
+<p><span class="math inline">\(((f * g) * h)(n) = (f * (g *
+h))(n)\)</span></p>
+<h3 id="对函数加法的分配律">对函数加法的分配律</h3>
+<p><span class="math inline">\((f * (g + h))(n) = (f * g)(n) + (f *
+h)(n)\)</span></p>
+<h3 id="单位元">单位元</h3>
+<p>单位函数 <span class="math inline">\(\varepsilon\)</span>
+是狄利克雷卷积的单位元。</p>
+<h3 id="逆元">逆元</h3>
+<p><span class="math inline">\(f\)</span> 存在狄利克雷逆元的必要条件是
+<span class="math inline">\(f(1)\ne 0\)</span>。</p>
+<h1 id="莫比乌斯反演">莫比乌斯反演</h1>
+<p>莫比乌斯函数是常数函数 <span class="math inline">\(1\)</span>
+的狄利克雷逆元，记为 <span class="math inline">\(\mu\)</span>，即 <span
+class="math inline">\((1 * \mu) = \sum_{d\mid n}\mu(d) =
+\varepsilon\)</span>。</p>
+<p>莫比乌斯函数被应用于下面的莫比乌斯反演公式：</p>
+<p><span class="math inline">\(g(n) = \sum_{d\mid n} f(d) \iff f(n) =
+\sum_{d\mid n}\mu(d)g(\dfrac{n}{d})\)</span>。用狄利克雷卷积的形式就是
+<span class="math inline">\((f * 1) = g\iff f = g * \mu\)</span>​。</p>
+<p>主要是用来推导式子，最常见的是利用 <span class="math inline">\((1 *
+\mu) = \varepsilon\)</span>
+，来把和式转化成含有莫比乌斯函数的式子，然后枚举除数，配合分块处理。</p>
+<p>例： <span class="math display">\[
+\begin{aligned}
+\sum_{i=1}^n\sum_{j=1}^m[\gcd(i,j)=1]
+&amp;=\sum_{i=1}^n\sum_{j=1}^m\sum_{d\mid \gcd(i,j)}\mu(d) \\
+&amp;=\sum_{i=1}^n\sum_{j=1}^m\sum_{d\mid i,\,d\mid j}\mu(d) \\
+&amp;=\sum_{d=1}^n \mu(d)\,\Big\lfloor \dfrac{n}{d}\Big\rfloor
+\Big\lfloor \dfrac{m}{d}\Big\rfloor
+\end{aligned}
+\]</span></p>
+<h1 id="线性筛">线性筛</h1>
+<p>线性筛的核心是，让每个数都只被它的最小质因子标记，这样就是 <span
+class="math inline">\(O(n)\)</span>​
+的。因此，我们筛素数的同时也会得到每个数的最小质因子。</p>
+<p>重点是用筛法求各类积性函数。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// minp(x) 可以找到 x 大于 1 的最小质因子</span></span><br><span class="line">std::vector&lt;<span class="type">int</span>&gt; minp, primes;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">sieve</span><span class="params">(<span class="type">int</span> n)</span> </span>&#123;</span><br><span class="line">    minp.<span class="built_in">assign</span>(n + <span class="number">1</span>, <span class="number">0</span>);</span><br><span class="line">    primes.<span class="built_in">clear</span>();</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">2</span>; i &lt;= n; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (minp[i] == <span class="number">0</span>) &#123;</span><br><span class="line">            minp[i] = i;</span><br><span class="line">            primes.<span class="built_in">push_back</span>(i);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">auto</span> p : primes) &#123;</span><br><span class="line">            <span class="keyword">if</span> (i * p &gt; n) &#123;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            minp[i * p] = p;</span><br><span class="line">            <span class="keyword">if</span> (p == minp[i]) &#123;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="筛法求欧拉函数">筛法求欧拉函数</h2>
+<p>设 <span class="math inline">\(p_1\)</span> 是 <span
+class="math inline">\(n\)</span> 的最小质因子，且 <span
+class="math inline">\(n = p_1\times n^\prime\)</span>，根据欧拉定理
+<span class="math inline">\(\varphi(n) =
+n\prod\dfrac{p-1}{p}\)</span>，讨论 <span
+class="math inline">\(n^\prime\)</span> 与 <span
+class="math inline">\(p_1\)</span> 的关系：</p>
+<ul>
+<li>若 <span class="math inline">\(n^\prime \equiv 0\pmod
+{p_1}\)</span>，说明 <span class="math inline">\(n^\prime\)</span>
+包含了 <span class="math inline">\(p_1\)</span> 质因子，因此 <span
+class="math inline">\(\varphi(n) = \varphi(n^\prime)\times
+p_1\)</span>。</li>
+<li>否则，说明 <span class="math inline">\(n^\prime\)</span> 不含 <span
+class="math inline">\(p_1\)</span>，此时 <span
+class="math inline">\(\varphi(n) = \varphi(n^\prime)\times (p_1 -
+1)\)</span>​。</li>
+</ul>
+<h2 id="筛法求莫比乌斯函数">筛法求莫比乌斯函数</h2>
+<p>设 <span class="math inline">\(p_1\)</span> 是 <span
+class="math inline">\(n\)</span> 的最小质因子，且 <span
+class="math inline">\(n = p_1\times n^\prime\)</span>，讨论 <span
+class="math inline">\(n^\prime\)</span> 与 <span
+class="math inline">\(p_1\)</span>​ 的关系：</p>
+<ul>
+<li><p>首先，<span class="math inline">\(\mu(1) = 1\)</span>。</p></li>
+<li><p>若 <span class="math inline">\(n\)</span> 是素数，<span
+class="math inline">\(\mu(n) = 1\)</span></p></li>
+<li><p>若 <span class="math inline">\(n^\prime \equiv 0\pmod
+{p_1}\)</span>，说明 <span class="math inline">\(n\)</span>
+有平方因子，<span class="math inline">\(\mu(n) = 0\)</span></p></li>
+<li><p>否则，<span class="math inline">\(\mu(n) =
+-\mu(n^\prime)\)</span></p></li>
+</ul>
+<h2 id="筛法求约数个数函数">筛法求约数个数函数</h2>
+<p>用 <span class="math inline">\(d_i\)</span> 表示约数个数，<span
+class="math inline">\(num_i\)</span> 表示 <span
+class="math inline">\(i\)</span> 的最小质因子出现次数。</p>
+<ul>
+<li>约数个数定理：若 <span class="math inline">\(n =
+\prod_{i=1}^mp_i^{c_i}\)</span>，那么 <span class="math inline">\(d_i =
+\prod_{i=1}^m(c_i + 1)\)</span>，根据乘法原理。</li>
+</ul>
+<p>原理：</p>
+<ul>
+<li>当 <span class="math inline">\(i\)</span> 为素数时，<span
+class="math inline">\(num_i = 1,d_i = 2\)</span>。同时，设 $q = $，其中
+<span class="math inline">\(p\)</span> 为 <span
+class="math inline">\(i\)</span> 的最小质因子。</li>
+<li>当 <span class="math inline">\(p\)</span> 为 <span
+class="math inline">\(q\)</span> 的质因子时，<span
+class="math inline">\(num_i = num_q + 1\)</span>，<span
+class="math inline">\(d_i = \dfrac{d_q}{num_i} \times (num_i +
+1)\)</span>。</li>
+<li>当 <span class="math inline">\(p,q\)</span> 互素时，<span
+class="math inline">\(num_i = 1,d_i = d_q\times (num_i +
+1)\)</span>。</li>
+</ul>
+<h2 id="筛法求因数和函数">筛法求因数和函数</h2>
+<p>用 <span class="math inline">\(\sigma_i\)</span> 表示因数和，<span
+class="math inline">\(num_i\)</span> 表示 <span
+class="math inline">\(i\)</span> 的最小质因子出现次数，<span
+class="math inline">\(sum_i\)</span> 表示当前最小质因子部分的和。</p>
+<ul>
+<li>约数和定理：若 <span class="math inline">\(n =
+\prod_{i=1}^mp_i^{c_i}\)</span>，那么 <span
+class="math inline">\(\sigma(n) = \prod_{i=1}^m(1 + p_i + p_i^2 + ... +
+p_i^{c_i}) =
+\displaystyle\prod_{i=1}^m\dfrac{p_i^{c_i+1}-1}{p_i-1}\)</span>。</li>
+</ul>
+<p>原理：</p>
+<ul>
+<li>当 <span class="math inline">\(i\)</span> 是素数时，<span
+class="math inline">\(num_i = 1, \sigma_i = i + 1,sum_i = i +
+1\)</span>。同时，设 $q = $，其中 <span class="math inline">\(p\)</span>
+为 <span class="math inline">\(i\)</span> 的最小质因子。</li>
+<li>当 <span class="math inline">\(p\)</span> 为 <span
+class="math inline">\(q\)</span> 的质因子时，<span
+class="math inline">\(num_i = num_q + 1, sum_i = sum_q +
+p^{num_i},\sigma_i = \sigma_{q}\times
+\dfrac{sum_i}{sum_{q}}\)</span>。</li>
+<li>当 <span class="math inline">\(p,q\)</span> 互素时，<span
+class="math inline">\(num_i = 1, sum_i = 1 + p, \sigma_i = \sigma_{q}
+\times (1 + p)\)</span>。</li>
+</ul>
+<p>通过这样的思路，还可以计算一般的积性函数 <span
+class="math inline">\(f\)</span>。</p>
+<h1 id="o值域-预处理的-o1-查询-gcd">O(值域) 预处理的 O(1) 查询 GCD</h1>
+<p>不讲具体证明，只讲原理：</p>
+<p>定理一：可以将值域中的每个 <span class="math inline">\(x\)</span>
+分解成 <span class="math inline">\(\{a,b,c\}\)</span> 三个数之积，满足
+<span class="math inline">\(a,b,c\le \sqrt x\)</span>
+或为素数，定义这种分解为合法分解。</p>
+<p>定理二：将 <span class="math inline">\(x\)</span> 分解为 <span
+class="math inline">\(a\times b\times c\)</span>，令 <span
+class="math inline">\(a_0 = (a, y), a_1 =
+(b,\dfrac{y}{a_0}),a_2=(c,\dfrac{y}{a_0a_1})\)</span>，则有 <span
+class="math inline">\((x, y) = a_0\times a_1\times a_2\)</span>。</p>
+<p>那么我们再考虑如何分解和查询。</p>
+<p>分解：对于 <span class="math inline">\(x\ge 2\)</span>，找到 <span
+class="math inline">\(x\)</span> 的最小质因子 <span
+class="math inline">\(p\)</span>，以及 <span
+class="math inline">\(\dfrac{x}{p}\)</span> 的合法分解 <span
+class="math inline">\(a\times b\times c\)</span>，那么 <span
+class="math inline">\(x\)</span> 的一种分解即为 <span
+class="math inline">\(\{ap, b, c\}\)</span>
+的升序排列。并且可以证明，一定有 ，我们可以跑一次线性筛，预处理一个
+<span class="math inline">\(\sqrt n\times \sqrt n\)</span> 的 gcd
+数组。</p>
+<p>查询：由于我们预处理了一个 gcd 数组，求 <span
+class="math inline">\((n, m)\)</span> 时，将 <span
+class="math inline">\(n\)</span> 分解为 <span
+class="math inline">\(a\times b\times c\)</span>，每次求 <span
+class="math inline">\(t = a/b/c\)</span>，将最终结果乘上 <span
+class="math inline">\(t\)</span> 并将 <span
+class="math inline">\(m\)</span> 除以 <span
+class="math inline">\(t\)</span>。具体地，若此时考虑的数 <span
+class="math inline">\(x\)</span> 为素数，求 <span
+class="math inline">\((x, m)\)</span> 是简单的，否则必有 <span
+class="math inline">\(x\le \sqrt{n}\)</span>，且 <span
+class="math inline">\((x,m) = (x, m\bmod x)\)</span>，因此只需要预处理出
+<span class="math inline">\(\sqrt V\)</span> 内任意两个数的 gcd 后即可
+<span class="math inline">\(O(1)\)</span> 查询。</p>
+<h1 id="bsgsexbsgs">BSGS/exBSGS</h1>
+<p>大步小步算法（Baby Step Giant Step,
+BSGS）是一种用来求解离散对数问题（即模意义下对数）的算法，即给出 <span
+class="math inline">\(a^x\equiv b\pmod m\)</span> 中 <span
+class="math inline">\(a,b,m\)</span> 的值（需要保证 <span
+class="math inline">\(a,m\)</span> 互素）求解 <span
+class="math inline">\(x\)</span>。而 exBSGS 可以在 <span
+class="math inline">\(a,m\)</span> 不互素的情况下计算。</p>
+<p>若 <span class="math inline">\(a,m\)</span> 互素，根据欧拉定理，<span
+class="math inline">\(a^{\varphi(m)} = 1\pmod
+m\)</span>，朴素求解的复杂度是 <span
+class="math inline">\(O(m)\)</span>。</p>
+<p>我们设 <span class="math inline">\(x = At - B\)</span>，则原式化为
+<span class="math inline">\(a^{At-B} \equiv b\pmod m\)</span>，即 <span
+class="math inline">\(a^{At}\equiv ba^{B}\pmod
+m\)</span>，我们预处理出右侧所有可能的取值，再固定一个 <span
+class="math inline">\(t\)</span>
+计算出左边所有可能的取值，如果发现某个值在右边出现过，此时 <span
+class="math inline">\(At-B\)</span> 就是我们要求的 <span
+class="math inline">\(x\)</span>。</p>
+<p><span class="math inline">\(B\)</span> 可能的取值有 <span
+class="math inline">\(\varphi(m) \bmod t\)</span> 个，<span
+class="math inline">\(A\)</span> 可能的取值有 <span
+class="math inline">\(\lfloor\dfrac{\varphi(m)}{t}\rfloor\)</span>
+个，因此取 <span class="math inline">\(t = \sqrt{\varphi(m)}\)</span>
+是最好的。时间复杂度 <span class="math inline">\(O(\sqrt
+m)\)</span>。</p>
+<p>而如果 <span class="math inline">\(a,m\)</span> 不互素，尝试转化到
+<span class="math inline">\(a,m\)</span> 互素的情形。</p>
+<p>当 <span class="math inline">\(x &gt; 0\)</span> 时，<span
+class="math inline">\(a^x\equiv b\pmod m\)</span> 等价于 <span
+class="math inline">\(a^{x-1}a + nm = b\)</span>，设 <span
+class="math inline">\(d = (a, m)\)</span>，那么 <span
+class="math inline">\(\dfrac{a^{x-1}a}{d} + \dfrac{nm}{d} =
+\dfrac{b}{d}\)</span>，即 <span
+class="math inline">\(\dfrac{a}{d}a^{x-1} \equiv \dfrac{b}{d}\pmod
+{\dfrac{m}{d}}\)</span>，此时如果 <span
+class="math inline">\((a,\dfrac{m}{d}) = 1\)</span>，就可以用 BSGS
+了，否则可以继续递归下去，直到互素。</p>
+<p>但是这样算出来不一定是最小解，还需要枚举。</p>
+<p><span class="math display">\[\sum_{x=1}^{\lfloor \frac{R}{d}
+\rfloor}\mu(x)(\lfloor
+\frac{R}{dx}\rfloor-\lfloor\frac{L-1}{dx}\rfloor)^n\]</span></p>
+<h1 id="杜教筛">杜教筛</h1>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
+              <a href="/tags/Graph/" rel="tag"># Graph</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/d9f80994/" rel="prev" title="ACM十月训练">
+                  <i class="fa fa-angle-left"></i> ACM十月训练
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/c3cf24c7/" rel="next" title="Git 使用教程">
+                  Git 使用教程 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">IncredibleJ</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">992k</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/yourname" class="github-corner" title="在 GitHub 上关注我" aria-label="在 GitHub 上关注我" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.umd.js" integrity="sha256-a+H7FYzJv6oU2hfsfDGM2Ohw/cR9v+hPfxHCLdmCrE8=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+  <script src="/js/third-party/fancybox.js"></script>
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>

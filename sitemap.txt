@@ -1,10 +1,14 @@
-https://www.incrdiblej.cool/posts/b98db1c/
-https://www.incrdiblej.cool/posts/12cce368/
-https://www.incrdiblej.cool/posts/6578684e/
-https://www.incrdiblej.cool/posts/492a6cd3/
-https://www.incrdiblej.cool/posts/e77c1c03/
-https://www.incrdiblej.cool/posts/1fde22bf/
+https://www.incrdiblej.cool/posts/4140b74f/
+https://www.incrdiblej.cool/posts/c3cf24c7/
+https://www.incrdiblej.cool/posts/7850e5e5/
 https://www.incrdiblej.cool/posts/fc43c44b/
+https://www.incrdiblej.cool/posts/d9f80994/
+https://www.incrdiblej.cool/posts/6578684e/
+https://www.incrdiblej.cool/posts/12cce368/
+https://www.incrdiblej.cool/posts/e77c1c03/
+https://www.incrdiblej.cool/posts/b98db1c/
+https://www.incrdiblej.cool/posts/492a6cd3/
+https://www.incrdiblej.cool/posts/1fde22bf/
 https://www.incrdiblej.cool/posts/10e45a4a/
 https://www.incrdiblej.cool/posts/9877fafc/
 https://www.incrdiblej.cool/posts/8dcf6eda/
@@ -91,6 +95,8 @@ https://www.incrdiblej.cool/tags/String/
 https://www.incrdiblej.cool/tags/Graph/
 https://www.incrdiblej.cool/tags/Miscellany/
 https://www.incrdiblej.cool/tags/Geometry/
+https://www.incrdiblej.cool/tags/muduo/
+https://www.incrdiblej.cool/tags/git/
 https://www.incrdiblej.cool/categories/UESTC/
 https://www.incrdiblej.cool/categories/ACM/
 https://www.incrdiblej.cool/categories/Atcoder/
@@ -99,3 +105,4 @@ https://www.incrdiblej.cool/categories/Welcome/
 https://www.incrdiblej.cool/categories/skill/
 https://www.incrdiblej.cool/categories/Algorithm/
 https://www.incrdiblej.cool/categories/Web/
+https://www.incrdiblej.cool/categories/develop/
