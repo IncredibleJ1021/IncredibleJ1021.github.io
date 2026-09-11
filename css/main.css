@@ -1323,7 +1323,7 @@ pre code {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #298866;
+  background: #7405c7;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
@@ -2455,6 +2455,9 @@ ul.breadcrumb li:last-child {
 .tag-cloud-10 {
   border-bottom-color: #111;
   color: #111;
+}
+.utterances {
+  max-width: unset;
 }
 .search-active {
   overflow: hidden;
